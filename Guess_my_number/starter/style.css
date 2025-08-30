@@ -15,7 +15,6 @@ body {
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
   background-color: #222;
-  /* background-color: #60b347; */
 }
 
 /* LAYOUT */
@@ -116,4 +115,85 @@ h1 {
 
 .label-score {
   margin-bottom: 2rem;
+}
+
+/* =========================================== */
+/*      MEDIA QUERIES PARA RESPONSIVIDAD       */
+/* =========================================== */
+
+/* Para tablets y móviles (hasta 768px) */
+@media (max-width: 768px) {
+  /* Hacemos un poco más pequeño el tamaño de fuente base para que todo escale mejor */
+  html {
+    font-size: 55%;
+  }
+
+  /* El layout principal ahora será una columna en lugar de dos */
+  main {
+    flex-direction: column;
+    height: auto; /* La altura se ajustará al contenido */
+    justify-content: flex-start;
+    padding-top: 10rem; /* Espacio para que no choque con el número */
+    gap: 4rem; /* Espacio entre la sección izquierda y derecha */
+  }
+
+  .left,
+  .right {
+    width: 100%; /* Ocupan todo el ancho disponible */
+    align-items: center;
+    text-align: center;
+  }
+
+  .message {
+    margin-bottom: 4rem; /* Reducimos el margen inferior */
+  }
+}
+
+/* Para móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  header {
+    height: 30vh;
+  }
+
+  main {
+    padding-top: 8rem;
+  }
+
+  h1 {
+    font-size: 2.8rem; /* Reducimos el título principal */
+    width: 90%; /* Evitamos que el texto se rompa en dos líneas */
+  }
+
+  .number {
+    font-size: 5rem;
+    width: 12rem;
+    padding: 2.5rem 0rem;
+  }
+
+  .between {
+    font-size: 1.2rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .again {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .guess {
+    font-size: 4rem;
+    width: 20rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .right {
+    font-size: 1.8rem;
+  }
 }
