@@ -11,3 +11,13 @@ for (let i = 0; i < btnsOpenModal.length; i++)
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
   });
+
+// THIS FUNCTION IS CREATED BECASUE OF DRY PRINCIPLE
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+// THEN WE CALLED IT HERE
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
